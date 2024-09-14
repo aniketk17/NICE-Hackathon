@@ -2,18 +2,23 @@ package com.nice.coday;
 
 public class TripDetails {
     private String vechileType;
-    private int initialBatteryPercentage;
+    private double initialBatteryPercentage;
     private String entryPoint;
     private String exitPoint;
+    private int id;
 
-    TripDetails(String type, int initial, String entryPoint, String exitPoint)
+    TripDetails(int id, String type, double initial, String entryPoint, String exitPoint)
     {
+        this.id = id;
         this.vechileType = type;
         this.initialBatteryPercentage = initial;
         this.entryPoint = entryPoint;
         this.exitPoint = exitPoint;
     }
 
+    public int getVechileId() {
+        return id;
+    }
     public String getVechileType() {
         return vechileType;
     }
@@ -26,7 +31,7 @@ public class TripDetails {
         return exitPoint;
     }
 
-    public int getInitialBatteryPercentage() {
+    public double getInitialBatteryPercentage() {
         return initialBatteryPercentage;
     }
 }

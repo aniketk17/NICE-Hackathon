@@ -1,25 +1,25 @@
 package com.nice.coday;
 
 public class TimeToChargeVechile {
-    private String vechileType;
+    private String vehicleType;
     private String chargingStation;
-    private int timeToChargePerUnit;
+    private double timeToChargePerUnit;
 
-    TimeToChargeVechile(String type, String station, int time) {
-        this.VechileType = type;
+    TimeToChargeVechile(String type, String station, double time) {
+        this.vehicleType = type;
         this.chargingStation = station;
         this.timeToChargePerUnit = time;
     }
 
-    public String getVechileType() {
-        return vechileType;
+    public String getVehicleType() {
+        return vehicleType;
     }
 
     public String getChargingStation() {
         return chargingStation;
     }
 
-    public int getTimeToChargePerUnit() {
+    public double getTimeToChargePerUnit() {
         return timeToChargePerUnit;
     }
 }

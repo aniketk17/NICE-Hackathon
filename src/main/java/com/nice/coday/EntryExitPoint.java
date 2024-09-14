@@ -2,9 +2,9 @@ package com.nice.coday;
 
 public class EntryExitPoint {
     private String name;
-    private int distanceFromStart;
+    private double distanceFromStart;
 
-    public EntryExitPoint(String name, int distanceFromStart) {
+    public EntryExitPoint(String name, double distanceFromStart) {
         this.name = name;
         this.distanceFromStart = distanceFromStart;
     }
@@ -13,7 +13,7 @@ public class EntryExitPoint {
         return name;
     }
 
-    public int getDistanceFromStart() {
+    public double getDistanceFromStart() {
         return distanceFromStart;
     }
 

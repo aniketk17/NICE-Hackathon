@@ -1,19 +1,19 @@
 package com.nice.coday;
 
-public class gigitggChargingStation {
+public class ChargingStation {
     private String stationName;
-    private int distanceFromStart;
+    private double distanceFromStart;
 
-    ChargingStation(String stationName, int distance) {
-        this.stationName = stationName;
-        this.distanceFromStart = distance;
+    ChargingStation(String name, double dist) {
+        this.stationName = name;
+        this.distanceFromStart = dist;
     }
 
     public String getStationName() {
         return stationName;
     }
 
-    public int getDistanceFromStart() {
+    public double getDistanceFromStart() {
         return distanceFromStart;
     }
 }
