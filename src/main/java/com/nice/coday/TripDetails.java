@@ -34,4 +34,14 @@ public class TripDetails {
     public double getInitialBatteryPercentage() {
         return initialBatteryPercentage;
     }
+
+    @Override
+    public String toString() {
+        return "TripDetails{id=" + id +
+                ", vehicleType='" + vechileType + '\'' +
+                ", initialBatteryPercentage=" + initialBatteryPercentage +
+                ", entryPoint='" + entryPoint + '\'' +
+                ", exitPoint='" + exitPoint + '\'' +
+                '}';
+    }
 }

@@ -22,4 +22,13 @@ public class VechileType {
     public double getMileage() {
         return mileage;
     }
+
+    @Override
+    public String toString() {
+        return "VehicleType{" +
+                "vehicleType='" + vehicleType + '\'' +
+                ", numberOfUnitsForFullyCharge=" + numberOfUnitsForFullyCharge +
+                ", mileage=" + mileage +
+                '}';
+    }
 }

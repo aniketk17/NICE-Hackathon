@@ -305,5 +305,5 @@ public class ElectricityConsumptionCalculatorTest {
                 .reduce(0L, Long::sum);
         Assert.assertEquals(expectedNumberOfTripsFinished, actualNumberOfTripsFinished);
 
-    }
+   }
 }

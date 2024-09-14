@@ -52,4 +52,16 @@ public class ConsumptionDetails {
     }
 
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("ConsumptionDetails{\n");
+        sb.append("  vehicleType='").append(vehicleType).append("',\n");
+        sb.append("  totalUnitConsumed=").append(totalUnitConsumed).append(",\n");
+        sb.append("  totalTimeRequired=").append(totalTimeRequired).append(",\n");
+        sb.append("  numberOfTripsFinished=").append(numberOfTripsFinished).append("\n");
+        sb.append('}');
+        return sb.toString();
+    }
+
 }

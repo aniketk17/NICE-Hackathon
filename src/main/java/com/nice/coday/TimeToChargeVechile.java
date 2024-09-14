@@ -22,4 +22,8 @@ public class TimeToChargeVechile {
     public double getTimeToChargePerUnit() {
         return timeToChargePerUnit;
     }
+
+    public String toString() {
+        return "TimeToChargeVechile{vehicleType='" + vehicleType + "', chargingStation='" + chargingStation + "', timeToChargePerUnit=" + timeToChargePerUnit + "}";
+    }
 }

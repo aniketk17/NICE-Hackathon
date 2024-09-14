@@ -13,17 +13,24 @@ public class TripDetailsReader {
         List<String> lines = Files.readAllLines(path);
 
         for (int i = 1; i < lines.size(); i++) {
-            String line = lines.get(i);
+            String line = lines.get(i).trim();
+            if (line.isEmpty()) continue;
+
             String[] parts = line.split(",");
+            if (parts.length < 5) continue;
 
-            int id = Integer.parseInt(parts[0]);
-            String vehicleType = parts[1];
-            double initialBatteryPercentage = Double.parseDouble(parts[2]);
-            String entryPoint = parts[3];
-            String exitPoint = parts[4];
+            try {
+                int id = Integer.parseInt(parts[0].trim());
+                String vehicleType = parts[1].trim();
+                double initialBatteryPercentage = Double.parseDouble(parts[2].trim());
+                String entryPoint = parts[3].trim();
+                String exitPoint = parts[4].trim();
 
-            TripDetails tripDetails = new TripDetails(id,vehicleType, initialBatteryPercentage, entryPoint, exitPoint);
-            tripDetailsList.add(tripDetails);
+                TripDetails tripDetails = new TripDetails(id, vehicleType, initialBatteryPercentage, entryPoint, exitPoint);
+                tripDetailsList.add(tripDetails);
+            } catch (NumberFormatException e) {
+                System.err.println("Error parsing line: " + line);
+            }
         }
         return tripDetailsList;
     }

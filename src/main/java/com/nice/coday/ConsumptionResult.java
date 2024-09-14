@@ -10,7 +10,7 @@ public class ConsumptionResult {
     private List<ConsumptionDetails> consumptionDetails = new ArrayList<>();
     public Map<String, Long> totalChargingStationTime = new HashMap<>();
 
-    private void setConsumptionDetails(List<ConsumptionDetails> consumptionDetails) {
+    public void setConsumptionDetails(List<ConsumptionDetails> consumptionDetails) {
         this.consumptionDetails = consumptionDetails;
     }
 
@@ -24,5 +24,14 @@ public class ConsumptionResult {
 
     public Map<String, Long> getTotalChargingStationTime() {
         return totalChargingStationTime;
+    }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("ConsumptionResult{\n");
+        sb.append("  consumptionDetails=").append(consumptionDetails).append(",\n");
+        sb.append("  totalChargingStationTime=").append(totalChargingStationTime).append("\n");
+        sb.append('}');
+        return sb.toString();
     }
 }

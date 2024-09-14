@@ -17,4 +17,8 @@ public class EntryExitPoint {
         return distanceFromStart;
     }
 
+    public String toString() {
+        return "EntryExitPoint{name='" + name + "', distanceFromStart=" + distanceFromStart + "}";
+    }
+
 }

@@ -16,4 +16,12 @@ public class ChargingStation {
     public double getDistanceFromStart() {
         return distanceFromStart;
     }
+
+    @Override
+    public String toString() {
+        return "ChargingStation{" +
+                "stationName='" + stationName + '\'' +
+                ", distanceFromStart=" + distanceFromStart +
+                '}';
+    }
 }
